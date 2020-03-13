@@ -70,22 +70,53 @@
             <h2>Contact</h2>
             <br>
             <!-- <hr /> -->
-            <p>
-                I am a visual artist and art educator based in Phoenix, Arizona. My recent watercolor paintings and
-                linocut
-                prints focus on plants and botanical subject matter, as well as explorations of my unique biracial
-                heritage.
-
-                Besides my personal creative endeavors, I regularly participate and sell my work in local events and
-                markets. As co-founder of Wild Leaves PHX, my work has appeared in pop-ups at the Grand Avenue Festival,
-                Palabras Bilingual Bookstore, Totem Yoga Studio, and the Melrose Vintage Market.
-
-
-            </p>
+            <form name="contact" method="POST" data-netlify="true">
+                <p>
+                    <label>Your Name: <input type="text" name="name" /></label>
+                </p>
+                <p>
+                    <label>Your Email: <input type="email" name="email" /></label>
+                </p>
+                <p>
+                    <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <div data-netlify-recaptcha="true"></div>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              
+                
+            </form>
+            <form name="contact" method="POST" netlify-honeypot="bot-field" data-netlify="true">
+                <p class="hidden">
+                  <label>Don’t fill this out if you're human: <input name="bot-field" /></label>
+                </p>
+                <p>
+                  <label>Email: <input type="text" name="email" /></label>
+                </p>
+                <p>
+                  <label>Message: <textarea name="message"></textarea></label>
+                </p>
+                <p>
+                  <button type="submit">Send</button>
+                </p>
+              </form>
+              
             <br>
         </div>
     </div>
 
 </body>
+<!-- <script>
+    $("#my-form").submit(function (e) {
+        e.preventDefault();
+
+        var $form = $(this);
+        $.post($form.attr("action"), $form.serialize()).then(function () {
+            alert("Thank you!");
+        });
+    });
+
+</script> -->
 
 </html>
