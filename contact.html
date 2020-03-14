@@ -81,21 +81,22 @@
             <!-- <hr /> -->
             <form name="contact" method="POST" data-netlify="true">
                 <div class="form-group">
-                    <label for="name">Name</label>
+                    <label for="name"><b>Name</b></label>
                     <input type="text" name="name" class="form-control" id="name" aria-describedby="nameHelp"
                         placeholder="Enter name">
                 </div>
 
                 <div class="form-group">
-                    <label for="email">Email address</label>
+                    <label for="email"><b>Email Address</b></label>
                     <input type="email" name="email" class="form-control" id="email" aria-describedby="emailHelp"
                         placeholder="Enter email">
                 </div>
                 <div class="form-group">
-                    <label for="textarea">Enter your message here</label>
+                    <label for="textarea"><b>Message</b></label>
                     <textarea class="form-control" id="textarea" rows="3" textarea name="message"></textarea>
                 </div>
                 <div data-netlify-recaptcha="true"></div>
+                <br>
                 <button type="submit" class="btn btn-primary">Submit</button>
             </form>
             <br>
@@ -104,16 +105,5 @@
     <br>
 
 </body>
-<!-- <script>
-    $("#my-form").submit(function (e) {
-        e.preventDefault();
-
-        var $form = $(this);
-        $.post($form.attr("action"), $form.serialize()).then(function () {
-            alert("Thank you!");
-        });
-    });
-
-</script> -->
 
 </html>
