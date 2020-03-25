@@ -50,8 +50,9 @@ font-family: 'Righteous', cursive;
 }
 
 /* About page styling */
+
 @media (min-width: 992px) {
-    .textContainer{
+    .textContainer {
         max-width: 970px;
     }
 }
@@ -63,4 +64,29 @@ font-family: 'Righteous', cursive;
 #flower {
     width: 64px;
     height: 64px;
+}
+
+/* Home page styles */
+
+.cardsHome {
+    font-family: 'Montserrat', sans-serif;
+}
+.cardLink:link {
+    color: black;
+    opacity: .65;
+}
+
+.cardLink:visited {
+    color: black;
+}
+
+.cardLink:hover {
+    text-decoration: none;
+    color: black;
+    opacity: 1;
+}
+
+.card {
+    background-color: rgba(255,255,255, 0.2) !important;
+    border: none;
 }
